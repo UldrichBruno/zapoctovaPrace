@@ -13,9 +13,9 @@
 /cygdrive/c/Users/Uzivatel/PRC1/zapoctovaPrace/main.cpp
 iostream
 -
-stdlib.h
+cstdlib
 -
-string.h
+cstring
 -
 Stack.h
 /cygdrive/c/Users/Uzivatel/PRC1/zapoctovaPrace/Stack.h

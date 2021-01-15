@@ -14,10 +14,22 @@ Stack::~Stack() {
 void Stack::push(char d) {
     counter++;
     data[counter] = d;
+  /*  switch (d){
+        case 43:
+            precedence = 1;
+            break;
+        case 45:
+            precedence = 1;
+            break;
+        case 42:
+            precedence = 2;
+        case 47:
+            precedence = 2;
+            break;
+    }*/
 }
 
 void Stack::pop() {
     data[counter] = 0;
     counter --;
 }
-

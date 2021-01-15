@@ -6,6 +6,7 @@ class Stack {
     int capacity;
     int counter;
     char *data;
+   // int precedence;
 public:
     Stack(int size);
     ~Stack();
@@ -14,6 +15,7 @@ public:
     int NumOfEl() const {return counter + 1;}
     void push(char d);
     void pop();
+    void popToOutput();
     float top() const { return data[counter];}
     int getCapacity() const { return capacity;}
 };
