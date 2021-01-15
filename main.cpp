@@ -1,8 +1,10 @@
 #include <iostream>
-using namespace std;
+#include <cstdlib>
+#include <cstring>
 #include "Stack.h"
 #include "Output.h"
 
+using namespace std;
 
 template <typename T>
 void show(T &s) {
@@ -11,38 +13,31 @@ void show(T &s) {
         s.pop();
     }
 }
-int main(int argc, char** argv) {
+int main() {
     Stack stack(50);
     Output output(50);
-    for (int i = 1; i < argc; ++i) {
-        if(*argv[i] <= 47 && *argv[i] >= 40){
-            stack.push(*argv[i]);
+    char str[20];
+    cout << "Zadejte algebraický výraz:" << endl;
+    cin.getline(str, 50);
+    char *token = strtok(str, " ");
+
+    while (token != nullptr)
+    {
+        if(*token < 48){
+            cout << "Přidá se do zásobníku" << endl;
+            stack.push(*token);
         } else {
-            output.push(*argv[i]);
+            cout << "Přidá se do fronty" << endl;
+           // printf("%s\n", token);
+            float fToken = atof(token);
+            output.push(fToken);
         }
+        token = strtok(nullptr, " ");
     }
+    cout << "Zásobník" << endl;
     show(stack);
-    cout << "output" << endl;
+    cout << "Fronta" << endl;
     show(output);
-   /* cout << "You have entered " << argc
-         << " arguments:" << "\n";
 
-    for (int i = 0; i < argc; i++)
-        cout << argv[i] << "\n";*/
-/*Stack pokus(5);
-pokus.push(3);
-pokus.push(3.14);
-pokus.push(7);
-pokus.push(-1);
-show(pokus);
-
-
-Output pokusny(5);
-pokusny.push(5);
-pokusny.push(2.71);
-pokusny.push(8);
-pokusny.push(-9);
-pokusny.push(4);
-show(pokusny);*/
 return 0;
 }

@@ -13,6 +13,10 @@
 /cygdrive/c/Users/Uzivatel/PRC1/zapoctovaPrace/main.cpp
 iostream
 -
+stdlib.h
+-
+string.h
+-
 Stack.h
 /cygdrive/c/Users/Uzivatel/PRC1/zapoctovaPrace/Stack.h
 Output.h
