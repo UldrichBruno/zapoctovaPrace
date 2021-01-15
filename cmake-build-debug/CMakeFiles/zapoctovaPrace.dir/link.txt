@@ -1,0 +1,1 @@
+/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/zapoctovaPrace.dir/main.cpp.o CMakeFiles/zapoctovaPrace.dir/Stack.cpp.o CMakeFiles/zapoctovaPrace.dir/Output.cpp.o  -o zapoctovaPrace.exe -Wl,--out-implib,libzapoctovaPrace.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
